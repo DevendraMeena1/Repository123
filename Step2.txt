@@ -1,0 +1,16 @@
+1)Setup Git & CircleCI.
+2)Fork the branch .
+3)Add project , click on show fork & start project .
+4)The build is getting timed out.
+5) Below code is looping for long time , fix it inorder to reduce time.
+
+private void validate() throws IllegalArgumentException {
+for (int i=0; i<20*60*60; i++) {
+    System.out.print('.');
+    try {
+        Thread.currentThread().sleep(1000);
+    } catch (InterruptedException e) {
+        break;
+    }
+}
+
