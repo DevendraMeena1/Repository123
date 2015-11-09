@@ -1,0 +1,37 @@
+Case 2: PRODSUP-002:
+
+Hi. I added my project to CircleCI but I can’t get the build complete. I’m not sure what I’m doing wrong. Can you help? My project is https://github.com/nym2015/commons-csv.
+
+---
+
+Jolene
+  
+  
+  
+  
+Hi Jolene ,
+
+After going through the code in circle.yml file , i came across below code ,which is causing the code to loop for substantial amount of time.
+
+commons-csv/src/main/java/org/apache/commons/csv/CSVFormat.java  : 795
+----------------------------------------------------------------
+/**
+* Verifies the consistency of the parameters and throws an IllegalArgumentException if necessary.
+*
+* @throws IllegalArgumentException
+*/
+private void validate() throws IllegalArgumentException {
+for (int i=0; i<20*60*60; i++) {
+    System.out.print('.');
+    try {
+        Thread.currentThread().sleep(1000);
+    } catch (InterruptedException e) {
+        break;
+    }
+}
+
+I have cut short the loop to make it run in small time interval . With your code it will take lot of time .
+
+
+Regards,
+Devendra
