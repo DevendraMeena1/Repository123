@@ -1,0 +1,37 @@
+Hello World!
+
+Case 1: PRODSUP-001:
+
+Hi Harry,
+
+I have received your support request ,you will require to make below changes inorder to show up test cases:
+
+1) Files in CircumCI are case sensitive , So please change Circle.yml to circle.yml 
+
+
+2) You need clear you circle.yml file and add below lines:
+
+test:
+  post:
+    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
+
+
+2) You need to turn on Maven Surefire Plugin in pov.xml file 
+ 
+ Please remove below line of code from pov.xml , this will activate the Plugin
+
+<configuration>
+   <skip>true</skip>
+</configuration>
+
+
+For detailed information click the below link 
+
+https://circleci.com/docs/test-metadata#metadata-collection-in-custom-test-steps
+
+I beleive after making these changes you can see test results on circle CI , Please refer my build at https://circleci.com/gh/DevendraMeena1/podam/15 .
+
+Regards,
+Devendra
+
