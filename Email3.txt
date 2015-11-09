@@ -1,0 +1,20 @@
+Dear customer support,
+
+I need to explain how CircleCI works to my boss. I’ve read the docs but I still don’t get it. Can you please explain to me, in your own words, how CircleCI works? Also, it seems like you don’t support .NET builds. Why is that?
+
+--
+
+Adam
+
+
+
+Hi Adam ,
+
+CircleCI provides development and software teams the confidence to build, test, and deploy—quickly and consistently—across numerous platforms. Built to address the demanding needs for today's application development environments, CircleCI supports all types of software testing including web, mobile and container (Docker) environments. CircleCI makes continuous integration and continuous deployment simple and easy for thousands of companies like Shopify, Cisco, Sony and Trunk Club, so they can ship better code, faster. CircleCI is venture backed by Draper Fisher Jurvetson, Baseline Ventures, Harrison Metal Capital, Data Collective, 500 Startups & SV Angel
+
+Currently we dont support .NET builds ,We are planning to add this funtionality in future ,However, you can make use of docker to run .NET.
+
+
+
+Regards,
+Devendra
