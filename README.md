@@ -10,7 +10,7 @@ Case 1: PRODSUP-001:
 * [circleCI -1](https://circleci.com/gh/DevendraMeena1/podam/21)
 
 
-Case 2: PRODSUP-002
+Case 2: PRODSUP-002:
 ====================
 * [Email2.txt](https://github.com/DevendraMeena1/Solution/blob/master/Email2.txt)
 * [Step2.text](https://github.com/DevendraMeena1/Solution/blob/master/Step2.txt)
