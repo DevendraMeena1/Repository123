@@ -1,0 +1,19 @@
+1)Setup Git & CircleCI.
+2)Fork the branch .
+3)Add project , click on show fork & start project .
+4)Check the test results .
+5)Check if circle.yml is in lower caps.
+6)Make the below required changes to circle.yml & add " 
+7)test:
+ post:
+   - mkdir -p $CIRCLE_TEST_REPORTS/junit/
+   - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;" to it.
+   
+
+ 8)Please remove below line of code from pov.xml , this will activate the Maven Plugin 
+
+<configuration>
+   <skip>true</skip>
+</configuration>
+
+
